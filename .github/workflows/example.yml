@@ -1,0 +1,23 @@
+name: Example
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup # Clones repo in env
+        uses: actions/checkout@v2
+    
+      - name: test
+        run: echo "Hello World!"
+        
+      # exit 1 is an error
+      - name: success
+        run: exit 1 
