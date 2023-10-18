@@ -37,3 +37,6 @@ jobs:
           
       - name: list all files in main
         run: ls -a
+
+      - name: clone into main repo
+        run: git clone https://github.com/Atseosi-Avanade/Avanade-ForkChallenge.git
